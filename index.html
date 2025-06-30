@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta 
+    name="description" 
+    content="Portafolio de Ángel Monzant: diseñador UI/UX, gráfico, editor de video y más."
+  >
+  <title>Ángel Monzant — Inicio</title>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar__logo">Ángel</div>
+
+  <button class="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="navbar__nav">
+    <ul class="navbar__list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Work<span class="work-count">(6)</span></a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- MENÚ LATERAL -->
+<aside class="side-menu" aria-hidden="true">
+  <button class="side-menu__close" aria-label="Cerrar menú">×</button>
+  <nav>
+    <ul class="side-menu__list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Work<span class="work-count">(6)</span></a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</aside>
+
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="hero__wrapper">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="assets/videos/hero-poster.jpg"
+      >
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo.
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Angel Monzant<br>
+          Photographer<br>
+          Filmmaker
+        </h1>
+      </div>
+    </div>
+  </main>
+
+<!-- SOBRE MÍ – SECTION PINNED (1) -->
+<section class="about-pinned">
+  <div class="about-pinned__wrapper">
+    <div class="about-img about-img--left">
+      <img src="assets/images/about-1.jpg" alt="Sobre mí imagen 1">
+    </div>
+    <div class="about-content">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Ángel Monzant, diseñador gráfico, UI/UX y editor de video con más
+        de 6 años de experiencia. Me apasiona crear experiencias visuales que
+        conecten de forma auténtica y funcional.
+      </p>
+      <p>
+        Desde 2018 he trabajado en agencia y como freelancer, desarrollando
+        branding, diseño de apps y sitios, gestión de redes y edición de video.
+      </p>
+    </div>
+    <div class="about-img about-img--right">
+      <img src="assets/images/about-2.jpg" alt="Sobre mí imagen 2">
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ – SECTION PINNED (2) -->
+<section class="about-pinned">
+  <div class="about-pinned__wrapper">
+    <div class="about-img about-img--left">
+      <img src="assets/images/about-3.jpg" alt="Sobre mí imagen 3">
+    </div>
+    <div class="about-content">
+      <h2>Mi Historia</h2>
+      <p>
+        Comencé como diseñador en 2018 y he colaborado con agencias, coaches
+        y startups. Siempre busco fusionar creatividad e investigación para
+        llevar cada proyecto al siguiente nivel.
+      </p>
+      <p>
+        Actualmente coordino marketing y diseño en Rapikom, explorando UI/UX
+        y nuevas herramientas como Figma e IA aplicada al diseño.
+      </p>
+    </div>
+    <div class="about-img about-img--right">
+      <img src="assets/images/about-4.jpg" alt="Sobre mí imagen 4">
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES PINNED HOME -->
+<section id="services-pinned" class="services-pinned">
+  <div class="services-pinned__wrapper">
+    <!-- Bloque 1 -->
+    <div class="service-block">
+      <div class="service-info">
+        <h3>Art Direction</h3>
+        <ul>
+          <li>Concept development</li>
+          <li>Creative direction</li>
+          <li>Photography</li>
+          <li>Video direction</li>
+          <li>Visual storytelling</li>
+          <li>Mood boards</li>
+        </ul>
+        <p>
+          Bringing creative visions to life through strategic and aesthetic
+          direction. I guide projects from concept to execution, ensuring a
+          consistent and impactful visual language.
+        </p>
+      </div>
+      <div class="service-img">
+        <img src="assets/images/art-direction.png" alt="Art Direction">
+      </div>
+    </div>
+
+    <!-- Bloque 2 -->
+    <div class="service-block">
+      <div class="service-info">
+        <h3>Branding</h3>
+        <ul>
+          <li>Analysis</li>
+          <li>Strategy</li>
+          <li>Design</li>
+          <li>Brand communication</li>
+          <li>Brand guidelines</li>
+        </ul>
+        <p>
+          I create unique brand identities that tell your story and connect
+          with your audience. From logo design to brand strategy, I craft
+          cohesive visuals and messaging that make your brand stand out.
+        </p>
+      </div>
+      <div class="service-img">
+        <img src="assets/images/branding.png" alt="Branding">
+      </div>
+    </div>
+
+    <!-- Añade aquí más .service-block según necesites… -->
+  </div>
+</section>
+
+
+
+ <!-- CONTACTO -->
+<section id="contact" class="section contact-section">
+  <div class="contact-section__container">
+    <p class="contact-section__intro">GET IN TOUCH</p>
+    <a href="mailto:angel@monzant.com" class="contact-section__email">
+      angel@monzant.com
+    </a>
+    <div class="contact-section__socials">
+      <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-outline">YouTube</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-outline">Instagram</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-outline">Twitter</a>
+    </div>
+    <div class="contact-section__footer">
+      <span>Ángel Monzant © 2025</span>
+      <span>Design &amp; Dev • TuNombre</span>
+    </div>
+  </div>
+</section>
+
+ <!-- CONTACTO -->
+<section id="contact" class="section contact-section">
+  <div class="contact-section__container">
+    <p class="contact-section__intro">GET IN TOUCH</p>
+    <a href="mailto:angel@monzant.com" class="contact-section__email">
+      angel@monzant.com
+    </a>
+    <div class="contact-section__socials">
+      <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-outline">YouTube</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-outline">Instagram</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-outline">Twitter</a>
+    </div>
+    <div class="contact-section__footer">
+      <span>Ángel Monzant © 2025</span>
+      <span>Design &amp; Dev • TuNombre</span>
+    </div>
+  </div>
+</section>
+
+  <script src="js/script.js"></script>
+  <script src="js/mobile-nav.js"></script>
+</body>
+</html>
