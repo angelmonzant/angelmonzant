@@ -634,7 +634,7 @@ body {
    —————————————————————————— */
 .services-pinned {
   position: relative;
-  height: calc(100vh * 2); /* = 2 servicios; multiplica por N */
+  height: calc(100vh * 7); /* = 2 servicios; multiplica por N */
 }
 
 .services-pinned__wrapper {
@@ -893,4 +893,30 @@ body {
   }
 }
 
+.site-footer {
+  padding: 2rem 1rem;
+  background: var(--bg-color);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #666;
+}
+
+.site-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.site-footer .socials {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
 
