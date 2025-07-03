@@ -145,5 +145,35 @@ if (aboutSections.length > 1) {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  // Si prefieres, puedes leer de localStorage aquí para persistir
 
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark', toggle.checked);
+    // Y si quieres persistir:
+    // localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+  });
+
+  // (Opcional) Si guardaste en localStorage, recupéralo al cargar:
+  // const saved = localStorage.getItem('theme');
+  // if (saved === 'dark') {
+  //   toggle.checked = true;
+  //   document.body.classList.add('dark');
+  // }
+});
+
+
+// en script.js, después de DOMContentLoaded…
+const toggleDesktop = document.getElementById('theme-toggle');
+const toggleMobile  = document.getElementById('theme-toggle-mobile');
+
+[toggleDesktop, toggleMobile].forEach(t => {
+  t && t.addEventListener('change', () => {
+    document.body.classList.toggle('dark', t.checked);
+    // sincronizamos el otro toggle
+    if (t === toggleDesktop && toggleMobile)  toggleMobile.checked = t.checked;
+    if (t === toggleMobile  && toggleDesktop) toggleDesktop.checked = t.checked;
+  });
+});
 
