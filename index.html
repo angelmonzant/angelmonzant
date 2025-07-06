@@ -28,13 +28,12 @@
 
   <nav class="navbar__nav">
     <ul class="navbar__list">
-      <!-- THEME TOGGLE -->
     <li class="nav-item theme-switcher">
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle" />
-        <span class="slider"></span>
-      </label>
-    </li>
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle-desktop" />
+            <span class="slider"></span>
+          </label>
+        </li>
     
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -46,36 +45,24 @@
 
 
   <!-- MENÚ LATERAL -->
-<aside class="side-menu" aria-hidden="true">
-  <button class="side-menu__close" aria-label="Cerrar menú">×</button>
-  <nav>
-    <ul class="side-menu__list">
-      <nav class="side-menu" aria-hidden="true">
+   
+<nav class="side-menu" aria-hidden="true">
   <button class="side-menu__close" aria-label="Cerrar menú">×</button>
   <ul class="side-menu__list">
-    <li class="side-menu__item"><a href="index.html">Home</a></li>
-    <li class="side-menu__item"><a href="about.html">About</a></li>
-    <li class="side-menu__item"><a href="work.html">Work(6)</a></li>
-    <li class="side-menu__item"><a href="contact.html">Contact</a></li>
-
-    <!-- Aquí duplicamos el theme-switcher -->
     <li class="side-menu__item theme-switcher">
       <label class="switch">
         <input type="checkbox" id="theme-toggle-mobile" />
         <span class="slider"></span>
       </label>
-      <span class="switch-label">Dark mode</span>
+      <span class="switch-label">Dark</span>
     </li>
+    <li class="side-menu__item"><a href="index.html">Home</a></li>
+    
+    <li class="side-menu__item"><a href="about.html">About</a></li>
+    <li class="side-menu__item"><a href="work.html">Work(6)</a></li>
+    <li class="side-menu__item"><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
-
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Work<span class="work-count">(6)</span></a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</aside>
 
 
   <!-- HERO -->

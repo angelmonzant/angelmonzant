@@ -915,60 +915,45 @@ body {
   font-size: 0.9rem;
 }
 
-/* ——————————————————————————
-   Variables de tema
-   —————————————————————————— */
+/* — Theme Variables — */
 :root {
   --bg-color: #e3e0eb;
   --text-color: #131517;
+  --primary-color: #1F4970;
 }
 body.dark {
   --bg-color: #131517;
   --text-color: #e3e0eb;
 }
 
-/* Aplica variables */
+/* Aplica colores */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
-/* Asegura que header también use bg dinámico */
-header {
+header,
+.side-menu {
   background-color: var(--bg-color);
 }
-
-/* Links y texto en nav usan var(--text-color) */
 .navbar__nav a,
-.navbar__nav .nav-item {
+.navbar__logo,
+.side-menu__list a,
+.switch-label {
   color: var(--text-color);
 }
 
-/* ——————————————————————————
-   Estilos del switch
-   —————————————————————————— */
-.theme-switcher {
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
-}
-
-/* Base de la switch */
+/* — Switch Base — */
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
-
-/* Oculta el checkbox real */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
-/* Slider (track + thumb) */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -977,50 +962,54 @@ header {
   border-radius: 20px;
   transition: background-color 0.3s;
 }
-
-/* El “thumb” */
 .slider::before {
-  position: absolute;
   content: "";
+  position: absolute;
   height: 16px; width: 16px;
   left: 2px; bottom: 2px;
   background-color: white;
   border-radius: 50%;
   transition: transform 0.3s;
 }
-
-/* Cuando está checked */
 .switch input:checked + .slider {
-  background-color: #666;
+  background-color: var(--primary-color);
 }
 .switch input:checked + .slider::before {
   transform: translateX(20px);
 }
 
-/* ——————————————————————————
-   El switch dentro del side-menu
-   —————————————————————————— */
+/* — Positioning in Desktop — */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+/* — Positioning in Side-Menu — */
 .side-menu__list .theme-switcher {
   display: flex;
   align-items: center;
   margin: 1rem 0;
 }
-.side-menu__list .theme-switcher .switch-label {
+.side-menu__list .switch-label {
   margin-left: 0.5rem;
-  color: var(--text-color);
   font-size: 0.95rem;
 }
 
-/* Ajustes de color para mobile */
+/* — Responsive Adjustments — */
 @media (max-width: 768px) {
-  /* Cambiamos el fondo de track y thumb para que destaque */
-  .switch .slider {
-    background-color: #444;        /* track en gris oscuro */
+  /* ensure hamburger visible */
+  .hamburger { display: flex !important; z-index: 1000; }
+  .navbar__nav { display: none !important; }
+
+  /* switch colors in mobile */
+  .slider {
+    background-color: #444;
   }
   .switch input:checked + .slider {
-    background-color: #888;        /* track checked en gris medio */
+    background-color: #888;
   }
-  .switch .slider::before {
-    background-color: #e3e0eb;     /* thumb claro */
+  .slider::before {
+    background-color: var(--bg-color);
   }
 }

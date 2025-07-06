@@ -146,34 +146,23 @@ if (aboutSections.length > 1) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('theme-toggle');
-  // Si prefieres, puedes leer de localStorage aquí para persistir
+  const t1 = document.getElementById('theme-toggle-desktop');
+  const t2 = document.getElementById('theme-toggle-mobile');
 
-  toggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark', toggle.checked);
-    // Y si quieres persistir:
-    // localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+  const sync = checked => {
+    document.body.classList.toggle('dark', checked);
+    if (t1) t1.checked = checked;
+    if (t2) t2.checked = checked;
+    // opcional: localStorage.setItem('theme', checked ? 'dark' : 'light');
+  };
+
+  [t1, t2].forEach(t => {
+    if (!t) return;
+    t.addEventListener('change', () => sync(t.checked));
   });
 
-  // (Opcional) Si guardaste en localStorage, recupéralo al cargar:
+  // opcional: persistencia
   // const saved = localStorage.getItem('theme');
-  // if (saved === 'dark') {
-  //   toggle.checked = true;
-  //   document.body.classList.add('dark');
-  // }
-});
-
-
-// en script.js, después de DOMContentLoaded…
-const toggleDesktop = document.getElementById('theme-toggle');
-const toggleMobile  = document.getElementById('theme-toggle-mobile');
-
-[toggleDesktop, toggleMobile].forEach(t => {
-  t && t.addEventListener('change', () => {
-    document.body.classList.toggle('dark', t.checked);
-    // sincronizamos el otro toggle
-    if (t === toggleDesktop && toggleMobile)  toggleMobile.checked = t.checked;
-    if (t === toggleMobile  && toggleDesktop) toggleDesktop.checked = t.checked;
-  });
+  // if (saved === 'dark') sync(true);
 });
 
