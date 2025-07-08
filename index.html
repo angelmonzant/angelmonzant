@@ -69,16 +69,15 @@
   <main class="hero">
     <div class="hero__wrapper">
       <video
-        class="hero__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="assets/videos/hero-poster.jpg"
-      >
-        <source src="assets/videos/hero.mp4" type="video/mp4">
-        Tu navegador no soporta vídeo.
-      </video>
+  id="hero-video"
+  src="assets/videos/hero.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+></video>
+
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <h1 class="hero__title">
